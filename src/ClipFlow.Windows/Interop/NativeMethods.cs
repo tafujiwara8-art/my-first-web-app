@@ -273,4 +273,9 @@ internal static partial class NativeMethods
 
     [LibraryImport("dwmapi.dll")]
     public static partial int DwmFlush();
+
+    public const uint DWMWA_TRANSITIONS_FORCEDISABLED = 3;
+
+    [LibraryImport("dwmapi.dll")]
+    public static partial int DwmSetWindowAttribute(nint hwnd, uint dwAttribute, ref int pvAttribute, uint cbAttribute);
 }
