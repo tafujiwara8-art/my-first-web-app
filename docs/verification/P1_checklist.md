@@ -82,7 +82,7 @@
 
 | 実行 | 環境 | 結果 |
 |---|---|---|
-| [CI #1](https://github.com/tafujiwara8-art/my-first-web-app/actions/runs/39136083057)（コミット `bcecf42`） | ubuntu-latest | Core.Tests 64 件合格 |
+| [CI](https://github.com/tafujiwara8-art/my-first-web-app/actions/workflows/ci.yml)（ブランチ `claude/zealous-brahmagupta-srqncq` の最新実行） | ubuntu-latest | Core.Tests 64 件合格 |
 | 同上 | windows-latest | Core.Tests 64 件・Windows.Tests 16 件合格（スキップ 0）、ビルド警告 0、自己完結 x64 発行物を作成 |
 
 自動テストで確認していること: 黒塗り・モザイク・ぼかしの領域内外（複数・重なり・はみ出し・ゼロサイズ）、PNG のチャンク構成と可逆性、JPEG の黒塗り偏差（丸めあり ≤ 8、丸めなし・余白なしでは混入すること）、注釈の描画範囲、`Dispose` 後の画素ゼロ化、`GatedHistoryWriter`、Core / Windows / App のアセンブリ参照（ネットワーク・System.Drawing・WPF）、クリップボードの 5 形式と DWORD 値、DPI 100/125/150/200% の座標換算の往復。
