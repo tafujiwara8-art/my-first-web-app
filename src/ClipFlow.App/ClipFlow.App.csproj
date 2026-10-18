@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- WPF アプリ。ネットワーク通信を行うコード（HttpClient 等）を含めない。 -->
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows10.0.19041.0</TargetFramework>
+    <SupportedOSPlatformVersion>10.0.19041.0</SupportedOSPlatformVersion>
+    <UseWPF>true</UseWPF>
+    <RootNamespace>ClipFlow.App</RootNamespace>
+    <AssemblyName>ClipFlow</AssemblyName>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Product>ClipFlow</Product>
+    <Version>0.1.0</Version>
+    <!-- 発行物は CI で自己完結 x64 として作る（README 参照）。 -->
+    <PublishSingleFile>false</PublishSingleFile>
+    <!-- クラッシュダンプを有効化する設定は提供しない（DOTNET_DbgEnableMiniDump 等は既定で無効）。 -->
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClipFlow.Core\ClipFlow.Core.csproj" />
+    <ProjectReference Include="..\ClipFlow.Windows\ClipFlow.Windows.csproj" />
+  </ItemGroup>
+</Project>
